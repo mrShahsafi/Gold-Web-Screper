@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as crawler
 from requests import get as get_req
 
 def tgju_creawler():
-    res = get_req(SOURCE_SITE)
+    res = get_req(SOURCE_SITE,timeout=10)
     if res.status_code != 200:
         return None
     page = crawler(
